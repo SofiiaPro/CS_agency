@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <title>Project</title>
+</head>
+
+<body style="overflow-x:hidden;">
+    <header>
+        <div class="nav__container container d-flex  justify-content-between">
+            <nav class="navbar navbar-expand-lg navbar-toggle able-lg justify-content--center w-100"
+                style="padding-top:1px">
+
+                <a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="79" height="75"
+                        viewBox="0 0 79 75">
+                        <g>
+                            <g opacity=".75">
+                                <path fill="#fff" d="M12 8h67v67H12z" />
+                            </g>
+                            <g>
+                                <path fill="#11749e" d="M0 0h67v67H0z" />
+                            </g>
+                        </g>
+                    </svg>
+                    <p class="logo-name">CS</p>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> <i class="fa fa-bars" style="color: white;"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <label for="open">
+                        <span class="hidden-desktop"></span>
+                    </label>
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item active" id="Home">
+                            <a class="nav-link" href="#Home">Home </a>
+                        </li>
+                        <li class="nav-item" id="Pages">
+                            <a class="nav-link" href="#Pages-anchor">Pages</a>
+                        </li>
+                        <li class="nav-item" id="Features">
+                            <a class="nav-link" href="#Feature-anchor">Features</a>
+                        </li>
+                        <li class="nav-item" id="Extensions">
+                            <a class="nav-link" href="#Extensions-anchor">Extensions</a>
+                        </li>
+                        <li class="nav-item" id="Team">
+                            <a class="nav-link" href="#Team-anchor">Team</a>
+                        </li>
+                        <li class="nav-item" id="Contact">
+                            <a class="nav-link" href="#Contact-anchor">Contact us</a>
+                        </li>
+
+                        <div class="header-social">
+                            <li class="nav-item2">
+                                <a class="nav-link" id="facebook" href="https://uk-ua.facebook.com/" target="_blank">
+                                    <?xml version="1.0"?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="Capa_1" x="0px" y="0px" width="15px" height="15px"
+                                        viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
+                                        xml:space="preserve" class="">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#FFFFFF" />
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </a>
+                            </li>
+                            <li class="nav-item2">
+                                <a class="nav-link" id="twitter" href="https://twitter.com/?lang=uk" target="_blank">
+                                    <?xml version="1.0"?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve" width="15px"
+                                        height="15px" class="">
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016    c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992    c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056    c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152    c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792    c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44    C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568    C480.224,136.96,497.728,118.496,512,97.248z"
+                                                        data-original="#000000" class="active-path"
+                                                        data-old_color="#000000" fill="#FFFFFF" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+
+                            </li>
+                            <li class="nav-item2">
+
+                                <a class="nav-link" id="skype" href="https://www.skype.com/uk/" target="_blank">
+                                    <?xml version="1.0"?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24"
+                                        height="15px" viewBox="0 0 24 24" width="15px" class="">
+                                        <g>
+                                            <path
+                                                d="m23.309 14.547c1.738-7.81-5.104-14.905-13.139-13.543-4.362-2.707-10.17.352-10.17 5.542 0 1.207.333 2.337.912 3.311-1.615 7.828 5.283 14.821 13.311 13.366 5.675 3.001 11.946-2.984 9.086-8.676zm-7.638 4.71c-2.108.867-5.577.872-7.676-.227-2.993-1.596-3.525-5.189-.943-5.189 1.946 0 1.33 2.269 3.295 3.194.902.417 2.841.46 3.968-.3 1.113-.745 1.011-1.917.406-2.477-1.603-1.48-6.19-.892-8.287-3.483-.911-1.124-1.083-3.107.037-4.545 1.952-2.512 7.68-2.665 10.143-.768 2.274 1.76 1.66 4.096-.175 4.096-2.207 0-1.047-2.888-4.61-2.888-2.583 0-3.599 1.837-1.78 2.731 2.466 1.225 8.75.816 8.75 5.603-.005 1.992-1.226 3.477-3.128 4.253z"
+                                                data-original="#000000" class="active-path" data-old_color="#000000"
+                                                fill="#FFFFFF" />
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="nav-item2">
+                                <a class="nav-link" id="" href="https://www.linkedin.com/" target="_blank">
+                                    <?xml version="1.0"?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                                        style="enable-background:new 0 0 512 512;" xml:space="preserve" width="15px"
+                                        height="15px" class="test">
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <rect y="160" width="114.496" height="352" data-original="#000000"
+                                                        class="active-path" data-old_color="#000000" fill="#FFFFFF" />
+                                                </g>
+                                            </g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M426.368,164.128c-1.216-0.384-2.368-0.8-3.648-1.152c-1.536-0.352-3.072-0.64-4.64-0.896    c-6.08-1.216-12.736-2.08-20.544-2.08c-66.752,0-109.088,48.544-123.04,67.296V160H160v352h114.496V320    c0,0,86.528-120.512,123.04-32c0,79.008,0,224,0,224H512V274.464C512,221.28,475.552,176.96,426.368,164.128z"
+                                                        data-original="#000000" class="active-path"
+                                                        data-old_color="#000000" fill="#FFFFFF" />
+                                                </g>
+                                            </g>
+                                            <g>
+                                                <g>
+                                                    <circle cx="56" cy="56" r="56" data-original="#000000"
+                                                        class="active-path" data-old_color="#000000" fill="#FFFFFF" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header-line"></div>
+        <div class="header-title">Creatives</div>
+        <div class="header-subtitle">Power by Creativity</div>
+
+        <div class="scroll">
+            <div class="scroll-text"><a href="#footer" class="scroll-text"> Scroll Down</a> </div>
+            <div class="scroll-icon"><a href="#footer"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="8"
+                        viewBox="0 0 15 8">
+                        <g>
+                            <g>
+                                <path fill="#fff"
+                                    d="M4.125 4.651L.75 1.276l.844-.844L7.5 6.34 13.406.362l.844.844-6.75 6.82-.844-.843z" />
+                            </g>
+                        </g>
+                    </svg></a></div>
+        </div>
+    </header>
+    <section class="agency-container">
+        <div class="agency-title-W">W</div>
+        <div class="agency-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+            We Are An Awesome Agency
+        </div>
+        <div class="agency-features">
+            <div class="feature-block1">
+                <div class="feature-one">
+                    <div class="feature-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+                            <g>
+                                <g>
+                                    <path fill="#fff"
+                                        d="M25.804 5.092L12.728 17.688v3.495h3.498L28.834 8.119zm.027-5.089c.541 0 1.083.207 1.495.62l5.981 5.975a2.112 2.112 0 0 1 0 2.988l-15.28 15.832H8.489v-9.53L24.336.62A2.111 2.111 0 0 1 25.83.003zM29.687 23.3a2.12 2.12 0 0 1 4.24 0v8.472a2.12 2.12 0 0 1-2.12 2.119H2.129a2.12 2.12 0 0 1-2.12-2.119V2.122C.009.951.958.002 2.129.002h8.48a2.12 2.12 0 1 1 0 4.236h-5.3a1.06 1.06 0 0 0-1.06 1.059v23.298c0 .585.474 1.059 1.06 1.059h23.318a1.06 1.06 0 0 0 1.06-1.06z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Feature one</div>
+                    <div class="feature-description">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis
+                        lacus
+                        vel augue laoreet rutrum faucibus</div>
+                </div>
+
+                <div class="feature-two">
+                    <div class="feature-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+                            <g>
+                                <g>
+                                    <path fill="#fff"
+                                        d="M25.804 5.092L12.728 17.688v3.495h3.498L28.834 8.119zm.027-5.089c.541 0 1.083.207 1.495.62l5.981 5.975a2.112 2.112 0 0 1 0 2.988l-15.28 15.832H8.489v-9.53L24.336.62A2.111 2.111 0 0 1 25.83.003zM29.687 23.3a2.12 2.12 0 0 1 4.24 0v8.472a2.12 2.12 0 0 1-2.12 2.119H2.129a2.12 2.12 0 0 1-2.12-2.119V2.122C.009.951.958.002 2.129.002h8.48a2.12 2.12 0 1 1 0 4.236h-5.3a1.06 1.06 0 0 0-1.06 1.059v23.298c0 .585.474 1.059 1.06 1.059h23.318a1.06 1.06 0 0 0 1.06-1.06z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Feature two</div>
+                    <div class="feature-description">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis
+                        lacus
+                        vel augue laoreet rutrum faucibus</div>
+                </div>
+            </div>
+            <div class="feature-block2">
+                <div class="feature-three">
+                    <div class="feature-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+                            <g>
+                                <g>
+                                    <path fill="#fff"
+                                        d="M25.804 5.092L12.728 17.688v3.495h3.498L28.834 8.119zm.027-5.089c.541 0 1.083.207 1.495.62l5.981 5.975a2.112 2.112 0 0 1 0 2.988l-15.28 15.832H8.489v-9.53L24.336.62A2.111 2.111 0 0 1 25.83.003zM29.687 23.3a2.12 2.12 0 0 1 4.24 0v8.472a2.12 2.12 0 0 1-2.12 2.119H2.129a2.12 2.12 0 0 1-2.12-2.119V2.122C.009.951.958.002 2.129.002h8.48a2.12 2.12 0 1 1 0 4.236h-5.3a1.06 1.06 0 0 0-1.06 1.059v23.298c0 .585.474 1.059 1.06 1.059h23.318a1.06 1.06 0 0 0 1.06-1.06z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Feature three</div>
+                    <div class="feature-description">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis
+                        lacus
+                        vel augue laoreet rutrum faucibus</div>
+                </div>
+                <div class="feature-four">
+                    <div class="feature-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+                            <g>
+                                <g>
+                                    <path fill="#fff"
+                                        d="M25.804 5.092L12.728 17.688v3.495h3.498L28.834 8.119zm.027-5.089c.541 0 1.083.207 1.495.62l5.981 5.975a2.112 2.112 0 0 1 0 2.988l-15.28 15.832H8.489v-9.53L24.336.62A2.111 2.111 0 0 1 25.83.003zM29.687 23.3a2.12 2.12 0 0 1 4.24 0v8.472a2.12 2.12 0 0 1-2.12 2.119H2.129a2.12 2.12 0 0 1-2.12-2.119V2.122C.009.951.958.002 2.129.002h8.48a2.12 2.12 0 1 1 0 4.236h-5.3a1.06 1.06 0 0 0-1.06 1.059v23.298c0 .585.474 1.059 1.06 1.059h23.318a1.06 1.06 0 0 0 1.06-1.06z" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="feature-title">Feature four</div>
+                    <div class="feature-description">Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis
+                        lacus
+                        vel augue laoreet rutrum faucibus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="akita-container container-fluid" id="Pages-anchor">
+        <div class="row row1">
+            <div class="col-md-6 first-akita_item">
+                <div class="akita-date1">Jan 4, 2016 | In Culture</div>
+                <div class="akita-title1"> Akita Inu Dog</div>
+                <div class="akita-description1">Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                    odio
+                    dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</div>
+                <div class="akita-description2">
+                    Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed posuere consectetur </div>
+            </div>
+
+            <div class="col-md-6 second-akita_item" data-aos="fade-left">
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="col-md-6 third-akita_item" data-aos="fade-right">
+            </div>
+            <div class="col-md-6 fourth-akita_item">
+                <div class="akita-date2">Jan 4, 2016 | In Culture</div>
+                <div class="akita-title2"> Akita Inu Dog</div>
+                <div class="akita-description3">Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+                    odio
+                    dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor</div>
+                <div class="akita-description4">
+                    Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed posuere consectetur </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-container" id="Extensions-anchor">
+        <div class="blog-title-b">B</div>
+        <div class="blog-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            Let's blog
+        </div>
+        <div class="blog-subtitle">We love clean design and advanced digital solutions
+        </div>
+
+        <div class="blog-team">
+            <div class="blog-block1">
+                <div class="blog-item1">
+                    <div class="blog-img-container">
+                        <img src="img/blog1.png" alt="team" class="blog-img">
+                        <div class="blog-hidden">
+                            <div class="hidden-text">Donec sed odio dui.
+                                Vivamus sagittis lacus vel </div>
+                        </div>
+                        <div class="blog-button"><button class="hidden-button">View</button></div>
+                    </div>
+                    <div class="item-title">
+                        Fresh Summer Campaign
+                    </div>
+                    <div class="item-description">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    </div>
+                </div>
+                <div class="blog-item2">
+                    <div class="blog-img-container">
+                        <img src="img/blog2.png" alt="team" class="blog-img">
+                        <div class="blog-hidden">
+                            <div class="hidden-text">Donec sed odio dui.
+                                Vivamus sagittis lacus vel </div>
+                        </div>
+                        <div class="blog-button"><button class="hidden-button">View</button></div>
+                    </div>
+                    <div class="item-title">
+                        Fresh Summer Campaign
+                    </div>
+                    <div class="item-description">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    </div>
+                </div>
+            </div>
+            <div class="blog-block2">
+                <div class="blog-item3">
+                    <div class="blog-img-container">
+                        <img src="img/blog3.png" alt="team" class="blog-img">
+                        <div class="blog-hidden">
+                            <div class="hidden-text">Donec sed odio dui.
+                                Vivamus sagittis lacus vel </div>
+                        </div>
+                        <div class="blog-button"><button class="hidden-button">View</button></div>
+                    </div>
+                    <div class="item-title">
+                        Fresh Summer Campaign
+                    </div>
+                    <div class="item-description">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    </div>
+                </div>
+                <div class="blog-item4">
+                    <div class="blog-img-container">
+                        <img src="img/blog4.png" alt="team" class="blog-img">
+                        <div class="blog-hidden">
+                            <div class="hidden-text">Donec sed odio dui.
+                                Vivamus sagittis lacus vel </div>
+                        </div>
+                        <div class="blog-button"><button class="hidden-button">View</button></div>
+                    </div>
+                    <div class="item-title">
+                        Fresh Summer Campaign
+                    </div>
+                    <div class="item-description">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-container">
+        <div class="info1">
+            <div class="info-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+                    <g>
+                        <g>
+                            <path fill="#fff"
+                                d="M52.458 10.366L25.863 36.008v7.115h7.115L58.62 16.53zM52.513.008c1.1 0 2.201.419 3.041 1.259L67.72 13.433a4.302 4.302 0 0 1 0 6.083l-31.077 32.23H17.24V32.344L49.47 1.266A4.287 4.287 0 0 1 52.513.008zm7.842 47.426a4.311 4.311 0 0 1 8.623 0V64.68a4.312 4.312 0 0 1-4.311 4.312H4.305A4.312 4.312 0 0 1-.006 64.68V4.318c0-2.38 1.93-4.312 4.311-4.312h17.247a4.312 4.312 0 0 1 0 8.624h-10.78c-1.19 0-2.155.965-2.155 2.156v47.427c0 1.191.965 2.157 2.156 2.157h47.426c1.191 0 2.156-.966 2.156-2.157z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="info-description1">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus
+                sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
+        </div>
+        <div class="info2">
+            <div class="info-img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="69" height="69" viewBox="0 0 69 69">
+                    <g>
+                        <g>
+                            <path fill="#fff"
+                                d="M52.458 10.366L25.863 36.008v7.115h7.115L58.62 16.53zM52.513.008c1.1 0 2.201.419 3.041 1.259L67.72 13.433a4.302 4.302 0 0 1 0 6.083l-31.077 32.23H17.24V32.344L49.47 1.266A4.287 4.287 0 0 1 52.513.008zm7.842 47.426a4.311 4.311 0 0 1 8.623 0V64.68a4.312 4.312 0 0 1-4.311 4.312H4.305A4.312 4.312 0 0 1-.006 64.68V4.318c0-2.38 1.93-4.312 4.311-4.312h17.247a4.312 4.312 0 0 1 0 8.624h-10.78c-1.19 0-2.155.965-2.155 2.156v47.427c0 1.191.965 2.157 2.156 2.157h47.426c1.191 0 2.156-.966 2.156-2.157z" />
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="info-description2">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus
+                sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</div>
+        </div>
+    </section>
+
+
+    <section class="quality-container" id="Feature-anchor">
+        <div class="quality-blocks">
+            <div class="quality-left-block">
+                <div class="quality-title">
+                    Akita Inu Dog
+                </div>
+                <div class="quality-description">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus
+                    mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Vivamus sagittis
+                    lacus
+                    vel
+                    augue laoreet rutrum faucibus dolor auctor</div>
+                <div class="quality-items">
+                    <div class="first-quality" data-aos="zoom-in-right" data-aos-duration="2000">Fully Responsive Design
+                    </div>
+                    <div class="second-quality" data-aos="zoom-in-right" data-aos-duration="2000">High Quality Code
+                    </div>
+                    <div class="third-quality" data-aos="zoom-in-right" data-aos-duration="2000">Different Headers &
+                        Layout</div>
+                </div>
+            </div>
+
+            <div class="phone-right-block ">
+                <img src="img/phone.png" alt="phone" class="quality-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="team-container" id="Team-anchor">
+        <div class="team-title-t">T</div>
+        <div class="team-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            Our Team
+        </div>
+        <div class="team-subtitle">Sales long tail influencer pitch release niche market
+        </div>
+        <div class="slider">
+            <div class="team-slider">
+                <div class="team-item1">
+                    <div class="team-img"><img src="img/team1.png" alt="team"></div>
+                    <div class="team-description1">
+                        <div class="team-name">JOHN SNOW</div>
+                        <div class="team-speciality">СEO</div>
+                    </div>
+                </div>
+
+                <div class="team-item2">
+                    <div class="team-img"><img src="img/team2.png" alt="team"></div>
+                    <div class="team-description2">
+                        <div class="team-name">LADY SANSA</div>
+                        <div class="team-speciality">WebDesigner</div>
+                    </div>
+                </div>
+
+                <div class="team-item3">
+                    <div class="team-img"><img src="img/team3.png" alt="team"></div>
+                    <div class="team-description3">
+                        <div class="team-name">DAVID SMITH</div>
+                        <div class="team-speciality">Photographer</div>
+                    </div>
+                </div>
+
+                <div class="team-item4">
+                    <div class="team-img"><img src="img/team4.png" alt="team"></div>
+                    <div class="team-description4">
+                        <div class="team-name">LADY SANSA</div>
+                        <div class="team-speciality">Photographer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact-container" id="Contact-anchor">
+        <div class="contact-title">
+            We’d love to hear about your project
+        </div>
+        <form action="#" method="get">
+            <div class="form">
+                <div class="form-block1">
+                    <div>
+                        <input placeholder="Name" class="form-name form-input" id="username" required type="text"
+                            minlength="2" maxlength="15">
+                        <div class="form-error">error</div>
+                    </div>
+                    <div>
+                        <input placeholder="Email" class="form-email form-input" required type="email">
+                        <div class=" form-error">error</div>
+                    </div>
+                    <div>
+                        <input placeholder="Phone" class="form-phone form-input" required type="tel" id="phone"
+                            minlength="5" data-mask="+(380) 00 000 00 00" maxlength="15">
+                    </div>
+                </div>
+                <div class="form-block2">
+                    <textarea placeholder="Message" class="form-message" type="text">
+                </textarea>
+                </div>
+
+                <div class="form-button">
+                    <button class="submit-button" type="submit">SUBMIT</button>
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+    <section class="maps-container">
+        <div id="mapid"></div>
+    </section>
+
+    <section class="footer-container" id="footer">
+        <div class="footer-text">
+            <div class="footer-rights">© 2020 Developed by Sophiia Hryniv</div>
+
+        </div>
+        </div>
+    </section>
+
+    <script src="map.js"> </script>
+    <script src="scroll.js"> </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <link rel="stylesheet">
+
+    <script src="slider.js"> </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./plugins/jquery.mask.min.js"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
